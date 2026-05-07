@@ -1,32 +1,51 @@
-#include <iostream>
-#include <string>
-
 #include "Human.h"
-using namespace std;
 
-Human::Human()  // constructor
+/// @brief Create a new human (with a default age of 1)
+Human::Human()
 {
     this->age = 1;
-    cout << "Constructor an instance of class Human" << endl;
+    std::cout << "Constructor an instance of class Human" << std::endl;
 }
 
+/// @brief Destructs a human
 Human::~Human()
 {
-   cout << "Done with Human. Bye." << endl;
+   std::cout << "Done with Human. Bye." << std::endl;
 }
 
-void Human::SetName(std::string humanName)
+/// @brief Sets the Human's name
+/// @param humanName 
+/// @return Human (for chaining calls)
+Human* Human::SetName(std::string humanName)
 {
     this->name = humanName;
+    return this;
 }
 
-void Human::SetAge(u_int8_t humanAge)
+/// @brief Sets the Human's age
+/// @param humanAge (limited to 0-255, size of unsigned 8-bit integer)
+/// @return Human (for chaining calls)
+Human* Human::SetAge(u_int8_t humanAge)
 {
     this->age = humanAge;
+    return this;
 }
 
+/// @brief Gets the Human's name
+/// @return name
+std::string Human::GetName() {
+    return this->name;
+}
+
+/// @brief Gets the Human's age
+/// @return age
+u_int8_t Human::GetAge() {
+    return this->age;
+}
+
+/// @brief Prints to stdout the Human's name and age
 void Human::IntroduceSelf()
 {
-    cout << "I am " << this->name << " and am " ;
-    cout << this->age << " years old." << endl;
+    std::cout << "I am " << this->name << " and am " ;
+    std::cout << this->age << " years old." << std::endl;
 }
