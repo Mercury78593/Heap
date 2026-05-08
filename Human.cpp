@@ -10,7 +10,7 @@ Human::Human()
 /// @brief Create a new human (given name and age)
 /// @param humanName 
 /// @param humanAge 
-Human::Human(std::string humanName, u_int_8_t humanAge) {
+Human::Human(std::string humanName, uint8_t humanAge) {
     name = humanName;
     age = humanAge;
 }
@@ -40,7 +40,7 @@ Human& Human::SetName(std::string humanName)
 /// @brief Sets the Human's age
 /// @param humanAge (limited to 0-255, size of unsigned 8-bit integer)
 /// @return Human (for chaining calls)
-Human& Human::SetAge(u_int8_t humanAge)
+Human& Human::SetAge(uint8_t humanAge)
 {
     age = humanAge;
     return *this;
@@ -54,7 +54,7 @@ std::string Human::GetName() {
 
 /// @brief Gets the Human's age
 /// @return age
-u_int8_t Human::GetAge() {
+uint8_t Human::GetAge() {
     return age;
 }
 

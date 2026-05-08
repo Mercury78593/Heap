@@ -5,26 +5,26 @@
 
 #include <iostream>
 #include <string>
-#include <algorithm>
+#include <cstdint>
 
 /// @brief A Human being
 class Human
 {
     public:
     Human();
-    Human(std::string, u_int8_t);
+    Human(std::string, uint8_t);
     Human(const Human&);
     ~Human();
 
     Human& SetName(std::string humanName);
-    Human& SetAge(u_int8_t humanAge);
+    Human& SetAge(uint8_t humanAge);
     std::string GetName();
-    u_int8_t GetAge();
+    uint8_t GetAge();
     void IntroduceSelf();
    
     private:
     std::string name;
-    u_int8_t age;
+    uint8_t age;
 };
 
 #endif
