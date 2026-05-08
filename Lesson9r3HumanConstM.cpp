@@ -10,14 +10,12 @@ using namespace std;
 int main()
 {
 
-    Human firstWoman;
-    firstWoman.SetName("Eve");
-    firstWoman.SetAge(28);
+    Human firstWoman("Eve", 28);
+    // firstWoman.SetName("Eve").SetAge(28);
     firstWoman.IntroduceSelf();
 
-    Human firstMan;
-    firstMan.SetName("Adam");
-    firstMan.SetAge(43);
+    Human firstMan("Adam", 43);
+    // firstMan.SetName("Adam").SetAge(43);
     firstMan.IntroduceSelf();
 
     cin.ignore();
