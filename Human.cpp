@@ -16,19 +16,19 @@ Human::~Human()
 /// @brief Sets the Human's name
 /// @param humanName 
 /// @return Human (for chaining calls)
-Human* Human::SetName(std::string humanName)
+Human& Human::SetName(std::string humanName)
 {
     this->name = humanName;
-    return this;
+    return *this;
 }
 
 /// @brief Sets the Human's age
 /// @param humanAge (limited to 0-255, size of unsigned 8-bit integer)
 /// @return Human (for chaining calls)
-Human* Human::SetAge(u_int8_t humanAge)
+Human& Human::SetAge(u_int8_t humanAge)
 {
     this->age = humanAge;
-    return this;
+    return *this;
 }
 
 /// @brief Gets the Human's name

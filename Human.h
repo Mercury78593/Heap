@@ -13,8 +13,8 @@ class Human
     Human();
     ~Human();
 
-    Human* SetName(std::string humanName);
-    Human* SetAge(u_int8_t humanAge);
+    Human& SetName(std::string humanName);
+    Human& SetAge(u_int8_t humanAge);
     std::string GetName();
     u_int8_t GetAge();
     void IntroduceSelf();

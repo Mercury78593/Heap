@@ -11,11 +11,11 @@ int main()
 {
 
     Human firstWoman;
-    firstWoman.SetName("Eve")->SetAge(28);
+    firstWoman.SetName("Eve").SetAge(28);
     firstWoman.IntroduceSelf();
 
     Human firstMan;
-    firstMan.SetName("Adam")->SetAge(43);
+    firstMan.SetName("Adam").SetAge(43);
     firstMan.IntroduceSelf();
 
     cin.ignore();
