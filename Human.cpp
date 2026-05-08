@@ -7,6 +7,21 @@ Human::Human()
     std::cout << "Constructor an instance of class Human" << std::endl;
 }
 
+/// @brief Create a new human (given name and age)
+/// @param humanName 
+/// @param humanAge 
+Human::Human(std::string humanName, u_int_8_t humanAge) {
+    this->name = humanName;
+    this->age = humanAge;
+}
+
+/// @brief Create a new human from another human
+/// @param other 
+Human::Human(const Human& other) {
+    this->name = other.name;
+    this->age = other.age;
+}
+
 /// @brief Destructs a human
 Human::~Human()
 {

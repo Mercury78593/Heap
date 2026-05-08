@@ -5,12 +5,15 @@
 
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 /// @brief A Human being
 class Human
 {
     public:
     Human();
+    Human(std::string, u_int8_t);
+    Human(const Human&);
     ~Human();
 
     Human& SetName(std::string humanName);
