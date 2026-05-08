@@ -3,7 +3,7 @@
 /// @brief Create a new human (with a default age of 1)
 Human::Human()
 {
-    this->age = 1;
+    age = 1;
     std::cout << "Constructor an instance of class Human" << std::endl;
 }
 
@@ -11,15 +11,15 @@ Human::Human()
 /// @param humanName 
 /// @param humanAge 
 Human::Human(std::string humanName, u_int_8_t humanAge) {
-    this->name = humanName;
-    this->age = humanAge;
+    name = humanName;
+    age = humanAge;
 }
 
 /// @brief Create a new human from another human
 /// @param other 
 Human::Human(const Human& other) {
-    this->name = other.name;
-    this->age = other.age;
+    name = other.name;
+    age = other.age;
 }
 
 /// @brief Destructs a human
@@ -33,7 +33,7 @@ Human::~Human()
 /// @return Human (for chaining calls)
 Human& Human::SetName(std::string humanName)
 {
-    this->name = humanName;
+    name = humanName;
     return *this;
 }
 
@@ -42,25 +42,25 @@ Human& Human::SetName(std::string humanName)
 /// @return Human (for chaining calls)
 Human& Human::SetAge(u_int8_t humanAge)
 {
-    this->age = humanAge;
+    age = humanAge;
     return *this;
 }
 
 /// @brief Gets the Human's name
 /// @return name
 std::string Human::GetName() {
-    return this->name;
+    return name;
 }
 
 /// @brief Gets the Human's age
 /// @return age
 u_int8_t Human::GetAge() {
-    return this->age;
+    return age;
 }
 
 /// @brief Prints to stdout the Human's name and age
 void Human::IntroduceSelf()
 {
-    std::cout << "I am " << this->name << " and am " ;
-    std::cout << this->age << " years old." << std::endl;
+    std::cout << "I am " << name << " and am " ;
+    std::cout << age << " years old." << std::endl;
 }
