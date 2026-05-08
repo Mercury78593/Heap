@@ -12,13 +12,13 @@ class Human
     Human();
     ~Human();
 
-void SetName(std::string humanName);
-void SetAge(int humanAge);
-void IntroduceSelf();
+    void SetName(std::string humanName);
+    void SetAge(u_int8_t humanAge);
+    void IntroduceSelf();
    
     private:
-    
-    
+    std::string name;
+    u_int8_t age;
 };
 
 #endif

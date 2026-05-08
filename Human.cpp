@@ -4,13 +4,9 @@
 #include "Human.h"
 using namespace std;
 
-string name;
-int age;
-
-
 Human::Human()  // constructor
 {
-    age =1;
+    this->age = 1;
     cout << "Constructor an instance of class Human" << endl;
 }
 
@@ -21,16 +17,16 @@ Human::~Human()
 
 void Human::SetName(std::string humanName)
 {
-    name = humanName;
+    this->name = humanName;
 }
 
-void Human::SetAge(int humanAge)
+void Human::SetAge(u_int8_t humanAge)
 {
-    age = humanAge;
+    this->age = humanAge;
 }
 
 void Human::IntroduceSelf()
 {
-    cout << "I am " << name << " and am " ;
-    cout << age << " years old." << endl;
+    cout << "I am " << this->name << " and am " ;
+    cout << this->age << " years old." << endl;
 }
